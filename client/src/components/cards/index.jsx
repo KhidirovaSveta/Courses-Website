@@ -11,7 +11,7 @@ const Card = () => {
         <div className="card">
           <img src={Books} alt="" className="cardimg" />
           <div className="uicours">
-            <h3>60+ UX courses</h3>
+            <h3 className="cardTitle">60+ UX courses</h3>
             <p>The automated process all your website tasks.</p>
           </div>
         </div>
@@ -19,7 +19,7 @@ const Card = () => {
         <div className="card">
           <img src={Person} alt="" className="cardimg" />
           <div className="uicours">
-            <h3>Expert instructors</h3>
+            <h3 className="cardTitle">Expert instructors</h3>
             <p>The automated process all your website tasks.</p>
           </div>
         </div>
@@ -27,7 +27,7 @@ const Card = () => {
         <div className="card">
           <img src={Clock} alt="" className="cardimg" />
           <div className="uicours">
-            <h3>Life time access</h3>
+            <h3 className="cardTitle">Life time access</h3>
             <p>The automated process all your website tasks.</p>
           </div>
         </div>
