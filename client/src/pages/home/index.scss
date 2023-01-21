@@ -1,0 +1,62 @@
+#Home {
+  .bgimg {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    top: -70px;
+  }
+  .container {
+    .main-text {
+      position: absolute;
+      top: 32%;
+      z-index: 1;
+      color: #fff;
+      left: 10%;
+      .learning {
+        font-size: 61px;
+        line-height: 72px;
+      }
+      .build {
+        margin-top: 20px;
+        font-size: 20px;
+        width: 70%;
+        line-height: 25px;
+      }
+      .joinFreeBtn {
+        margin-top: 25px;
+        border: none;
+        background-color: transparent;
+        padding: 15px 37px;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 17px;
+        background-color: #ff9f67;
+        cursor: pointer;
+        transition: all 0.5s;
+        &:hover {
+          background-color: #be5cff;
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .ourCourses {
+      margin-top: 150px;
+      padding-bottom: 150px;
+      h2 {
+        margin-bottom: 55px;
+        text-align: center;
+        font-size: 40px;
+        color: #4255a4;
+      }
+    }
+    .CommunityExperts {
+      h2 {
+        margin-bottom: 55px;
+        text-align: center;
+        font-size: 40px;
+        color: #4255a4;
+      }
+    }
+  }
+}

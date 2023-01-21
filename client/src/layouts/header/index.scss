@@ -1,0 +1,56 @@
+#Header {
+  background-color: transparent;
+  padding-top: 20px;
+  box-sizing: border-box;
+  .container {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .nav-Bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 18px;
+        ul {
+          display: flex;
+          list-style: none;
+          column-gap: 25px;
+          a {
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+        .headerBtn {
+          button {
+            border: 1px solid #fff;
+            background-color: transparent;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 17px;
+            cursor: pointer;
+            transition: all 0.5s;
+          }
+          .btn-join {
+            padding: 15px 35px;
+            border: none;
+            margin: 0 20px;
+            background-color: #FF9F67;
+            &:hover {
+              background-color: #be5cff;
+              transform: scale(1.05);
+            }
+          }
+          .btn-login{
+            padding: 15px 30px;
+            &:hover {
+              background-color: #FF9F67;
+              border: none;
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+    }
+  }
+}

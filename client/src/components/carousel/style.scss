@@ -1,0 +1,108 @@
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 80%;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card1 {
+  .info {
+    .title {
+      font-family: "Mulish", sans-serif;
+      margin: 25px 15px;
+      color: #7f86a3;
+    }
+    h3 {
+      font-family: "Mulish", sans-serif;
+      margin: 20px 15px;
+      color: #4255a4;
+    }
+    .description {
+      font-family: "Mulish", sans-serif;
+      margin: 15px 15px;
+      line-height: 29px;
+      color: #7f86a3;
+    }
+  }
+  .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 15px;
+    .points {
+      font-size: 14px;
+      .star {
+        color: #ff7b2e;
+      }
+      .txt {
+        margin: 10px 0;
+        span {
+          color: #ff7b2e;
+        }
+        color: #7f86a3;
+      }
+    }
+    .usd {
+      font-family: "Mulish", sans-serif;
+      color: #4255a4;
+      font-size: 25px;
+      font-weight: 600;
+    }
+  }
+  .carouselBtn {
+    margin: 27px;
+    width: 80%;
+    padding: 18px 0;
+    background-color: transparent;
+    border: 1px solid #acafbc;
+    transition: all .5s;
+    &:hover{
+      background-color: #ff7b2e;
+      color: #fff;
+      border: none;
+    }
+  }
+}
