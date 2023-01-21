@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../../components/cards";
 import Carousel from "../../components/carousel";
+import SubCards from "../../components/sub-cards";
 import BgImg from "../../img/h1_hero.png";
 import "./index.scss";
 const Home = () => {
@@ -25,7 +26,13 @@ const Home = () => {
           <h2>Our featured courses</h2>
           <Carousel />
         </div>
-        
+
+        {/*Explore our top subjects */}
+        <div className="CommunityExperts">
+          <h2>Explore top subjects</h2>
+          <SubCards/>
+        </div>
+
         {/* Carousel with our community */}
         <div className="CommunityExperts">
           <h2>Community experts</h2>

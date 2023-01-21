@@ -32,10 +32,9 @@
         font-size: 17px;
         background-color: #ff9f67;
         cursor: pointer;
-        transition: all 0.5s;
+        transition: all 0.7s;
         &:hover {
-          background-color: #be5cff;
-          transform: scale(1.05);
+          box-shadow: inset 400px 0 0 0 #6f42c1;
         }
       }
     }
