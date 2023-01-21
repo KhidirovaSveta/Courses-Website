@@ -1,0 +1,32 @@
+#Details {
+  background: rgb(90, 32, 214);
+  background: linear-gradient(
+    354deg,
+    rgba(90, 32, 214, 1) 31%,
+    rgba(158, 34, 195, 1) 97%
+  );
+  position: relative;
+  z-index: -1;
+  top: -70px;
+  .container {
+    .detail {
+      font-family: "Mulish", sans-serif;
+      color: #fff;
+      padding: 180px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 20px;
+      .info {
+        width: 50%;
+        font-size: 30px;
+        .desc {
+          margin: 15px 0;
+          font-size: 18px;
+          line-height: 25px;
+          color: #b4bee4;
+        }
+      }
+    }
+  }
+}

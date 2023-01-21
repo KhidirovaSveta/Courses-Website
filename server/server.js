@@ -24,10 +24,21 @@ const coursesSchema = new Schema(
 
 const Courses = mongoose.model("Courses", coursesSchema);
 
-app.get("/", (req, res) => {
+app.get("/courses", (req, res) => {
   Courses.find({}, (error, docs) => {
     if (!error) {
       res.send(docs);
+    } else {
+      res.status(500).json({ message: error });
+    }
+  });
+});
+
+app.get("/courses/:id", (req, res) => {
+  const { id } = req.params;
+  Courses.findById(id, (error, doc) => {
+    if (!error) {
+      res.send(doc);
     } else {
       res.status(500).json({ message: error });
     }
@@ -41,7 +52,7 @@ mongoose.connect(
   (error) => {
     if (!error) {
       app.listen(port, () => {
-        console.log(`Example app listening on port http://localhost:${port}`);
+        console.log(`Example app listening on port http://localhost:${port}/courses`);
       });
     }
   }

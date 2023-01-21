@@ -43,9 +43,8 @@
           .btn-login {
             padding: 15px 30px;
             &:hover {
-              background-color: #ff9f67;
               border: none;
-              transform: scale(1.05);
+              box-shadow: inset 400px 0 0 0 #ff9f67;
             }
           }
         }

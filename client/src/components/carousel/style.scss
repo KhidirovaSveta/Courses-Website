@@ -48,62 +48,67 @@ body {
   object-fit: cover;
 }
 
-.card1 {
-  .info {
-    .title {
-      font-family: "Mulish", sans-serif;
-      margin: 25px 15px;
-      color: #7f86a3;
-    }
-    h3 {
-      font-family: "Mulish", sans-serif;
-      margin: 20px 15px;
-      color: #4255a4;
-    }
-    .description {
-      font-family: "Mulish", sans-serif;
-      margin: 15px 15px;
-      line-height: 29px;
-      color: #7f86a3;
-    }
+.carousel {
+  a {
+    text-decoration: none;
   }
-  .price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 15px;
-    .points {
-      font-size: 14px;
-      .star {
-        color: #ff7b2e;
+  .card1 {
+    .info {
+      .title {
+        font-family: "Mulish", sans-serif;
+        margin: 25px 15px;
+        color: #7f86a3;
       }
-      .txt {
-        margin: 10px 0;
-        span {
-          color: #ff7b2e;
-        }
+      h3 {
+        font-family: "Mulish", sans-serif;
+        margin: 20px 15px;
+        color: #4255a4;
+      }
+      .description {
+        font-family: "Mulish", sans-serif;
+        margin: 15px 15px;
+        line-height: 29px;
         color: #7f86a3;
       }
     }
-    .usd {
-      font-family: "Mulish", sans-serif;
-      color: #4255a4;
-      font-size: 25px;
-      font-weight: 600;
+    .price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 15px;
+      .points {
+        font-size: 14px;
+        .star {
+          color: #ff7b2e;
+        }
+        .txt {
+          margin: 10px 0;
+          span {
+            color: #ff7b2e;
+          }
+          color: #7f86a3;
+        }
+      }
+      .usd {
+        font-family: "Mulish", sans-serif;
+        color: #4255a4;
+        font-size: 25px;
+        font-weight: 600;
+      }
     }
-  }
-  .carouselBtn {
-    margin: 27px;
-    width: 80%;
-    padding: 18px 0;
-    background-color: transparent;
-    border-radius: 5px;
-    border: 1px solid #acafbc;
-    transition: all .7s;
-    &:hover{
-      box-shadow: inset 0 400px 0 0 #ff7b2e;
-      color: #fff;
-      border: none;
+    .carouselBtn {
+      margin: 27px;
+      width: 80%;
+      padding: 18px 0;
+      background-color: transparent;
+      border-radius: 5px;
+      border: 1px solid #acafbc;
+      transition: all 0.7s;
+      &:hover {
+        box-shadow: inset 0 400px 0 0 #ff7b2e;
+        color: #fff;
+        border: none;
+      }
     }
   }
 }

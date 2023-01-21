@@ -8,12 +8,15 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Autoplay, Navigation } from "swiper";
+import { Link } from "react-router-dom";
 
 const Carousel = () => {
   const [courses, setCourses] = useState();
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/`).then((data) => setCourses(data.data));
+    axios
+      .get(`http://localhost:8080/courses`)
+      .then((data) => setCourses(data.data));
   }, []);
 
   return (
@@ -32,29 +35,32 @@ const Carousel = () => {
           className="mySwiper"
         >
           {courses?.map((course) => {
-            console.log(course.price);
             return (
               <SwiperSlide>
-                <div className="card1">
-                  <img src={course.imgUrl} alt="" className="cardimg" />
-                  <div className="info">
-                    <p className="title">{course.title}</p>
-                    <h3>{course.name}</h3>
-                    <p className="description">{course.description}</p>
-                  </div>
-                  <div className="price">
-                    <div className="points">
-                      <i className="fa-solid fa-star star"></i>
-                      <i className="fa-solid fa-star star"></i>
-                      <i className="fa-solid fa-star star"></i>
-                      <i className="fa-solid fa-star star"></i>
-                      <i className="fa-regular fa-star-half star"></i>
-                      <p className="txt"><span>(4.5)</span> based on 120</p>
+                <Link to={`/home/${course._id}`}>
+                  <div className="card1">
+                    <img src={course.imgUrl} alt="" className="cardimg" />
+                    <div className="info">
+                      <p className="title">{course.title}</p>
+                      <h3>{course.name}</h3>
+                      <p className="description">{course.description}</p>
                     </div>
-                    <p className="usd">{course.price}</p>
-                  </div>
+                    <div className="price">
+                      <div className="points">
+                        <i className="fa-solid fa-star star"></i>
+                        <i className="fa-solid fa-star star"></i>
+                        <i className="fa-solid fa-star star"></i>
+                        <i className="fa-solid fa-star star"></i>
+                        <i className="fa-regular fa-star-half star"></i>
+                        <p className="txt">
+                          <span>(4.5)</span> based on 120
+                        </p>
+                      </div>
+                      <p className="usd">{course.price}</p>
+                    </div>
                     <button className="carouselBtn">Find Out More</button>
-                </div>
+                  </div>
+                </Link>
               </SwiperSlide>
             );
           })}
