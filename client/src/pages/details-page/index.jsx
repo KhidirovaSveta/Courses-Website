@@ -34,7 +34,7 @@ const Details = () => {
             <p className="desc">{details.description}</p>
             <spam className="detailsPrice">Price: {details.price}</spam>
             <br />
-            <button onClick={() => handleDelete(details._id)}> Delete </button>
+            <button onClick={() => handleDelete(details._id)} className="deleteBtn"> Delete </button>
           </div>
           <div className="imgdetails">
             <img src={details.imgUrl} alt="" className="detailImg" />

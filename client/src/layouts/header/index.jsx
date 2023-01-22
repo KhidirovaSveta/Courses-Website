@@ -68,6 +68,7 @@ const Header = () => {
                 {" "}
                 <NavLink to={"/pages/add-course"}> Add Course </NavLink>
               </li>
+              <li><i className="fa-solid fa-bag-shopping bag"></i></li>
             </ul>
             <div className="headerBtn">
               <button className="btn-join">Join</button>
