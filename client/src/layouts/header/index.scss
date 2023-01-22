@@ -16,6 +16,12 @@
           display: flex;
           list-style: none;
           column-gap: 25px;
+          li {
+            font-size: 17px;
+            .drop {
+              font-size: 17px;
+            }
+          }
           a {
             color: #fff;
             text-decoration: none;
