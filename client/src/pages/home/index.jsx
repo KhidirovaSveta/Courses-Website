@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../../components/cards";
 import Carousel from "../../components/carousel";
+import CarouselExperts from "../../components/carouselExperts";
 import SubCards from "../../components/sub-cards";
 import BgImg from "../../img/h1_hero.png";
 import "./index.scss";
@@ -30,12 +31,13 @@ const Home = () => {
         {/*Explore our top subjects */}
         <div className="CommunityExperts">
           <h2>Explore top subjects</h2>
-          <SubCards/>
+          <SubCards />
         </div>
 
         {/* Carousel with our community */}
         <div className="CommunityExperts">
           <h2>Community experts</h2>
+          <CarouselExperts />
         </div>
       </div>
     </div>

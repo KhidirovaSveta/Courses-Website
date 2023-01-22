@@ -11,6 +11,8 @@ app.use(bodyParser.json());
 
 const { Schema } = mongoose;
 
+// courses API
+
 const coursesSchema = new Schema(
   {
     title: { type: String, require: true },
@@ -45,7 +47,7 @@ app.get("/courses/:id", (req, res) => {
   });
 });
 
-//  experts
+//  experts API 
 
 const expertsSchema = new Schema(
   {
