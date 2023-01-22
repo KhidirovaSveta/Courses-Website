@@ -1,0 +1,32 @@
+#addCourse {
+  .container {
+    .formik {
+      padding: 50px 0;
+      text-align: center;
+      h1{
+        margin-bottom: 25px;
+      }
+      .form {
+        .input {
+          display: block;
+          margin-bottom: 20px;
+          input{
+            padding: 12px 15px;
+            width: 28%;
+            border-radius: 5px;
+            border: none;
+            border-bottom: 1px solid #6f42c1;
+          }
+        }
+        .formikBtn{
+            padding: 11px 28px;
+            cursor: pointer;
+            background-color: #fc9960;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+      }
+    }
+  }
+}
