@@ -24,6 +24,7 @@ const Details = () => {
           <div className="info">
             <p className="coursesName">{details.name}</p>
             <p className="desc">{details.description}</p>
+            <spam className="detailsPrice">Price: {details.price}</spam>
           </div>
           <img src={details.imgUrl} alt="" />
         </div>

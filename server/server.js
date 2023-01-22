@@ -45,6 +45,29 @@ app.get("/courses/:id", (req, res) => {
   });
 });
 
+//  experts
+
+const expertsSchema = new Schema(
+  {
+    imgUrl: { type: String, require: true },
+    name: { type: String, require: true },
+    description: { type: String, require: true },
+  },
+  { timestamp: true }
+);
+
+const Experts = mongoose.model("experts", expertsSchema);
+
+app.get("/experts", (req, res) => {
+  Experts.find({}, (error, docs) => {
+    if (!error) {
+      res.send(docs);
+    } else {
+      res.status(500).json({ message: error });
+    }
+  });
+});
+
 mongoose.set("strictQuery", false);
 
 mongoose.connect(
@@ -52,7 +75,9 @@ mongoose.connect(
   (error) => {
     if (!error) {
       app.listen(port, () => {
-        console.log(`Example app listening on port http://localhost:${port}/courses`);
+        console.log(
+          `Example app listening on port http://localhost:${port}`
+        );
       });
     }
   }
