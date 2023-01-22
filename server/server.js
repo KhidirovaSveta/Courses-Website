@@ -47,7 +47,30 @@ app.get("/courses/:id", (req, res) => {
   });
 });
 
-//  experts API 
+app.post("/courses", (req, res) => {
+  let newCourse = new Courses({
+    title: req.body.title,
+    name: req.body.name,
+    description: req.body.description,
+    price: req.body.price,
+    imgUrl: req.body.imgUrl,
+  });
+  newCourse.save();
+  res.send("succsess");
+});
+
+app.delete("/courses/:id", (req, res) => {
+  const { id } = req.params;
+  Courses.findByIdAndDelete(id, (error) => {
+    if (!error) {
+      res.send("succsess");
+    } else {
+      res.status(404).json({ message: error });
+    }
+  });
+});
+
+//  experts API
 
 const expertsSchema = new Schema(
   {
@@ -77,9 +100,7 @@ mongoose.connect(
   (error) => {
     if (!error) {
       app.listen(port, () => {
-        console.log(
-          `Example app listening on port http://localhost:${port}`
-        );
+        console.log(`Example app listening on port http://localhost:${port}`);
       });
     }
   }
