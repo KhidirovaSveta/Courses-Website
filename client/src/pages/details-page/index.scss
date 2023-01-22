@@ -1,18 +1,31 @@
 #Details {
-  background: rgb(90, 32, 214);
-  background: linear-gradient(
-    354deg,
-    rgba(90, 32, 214, 1) 31%,
-    rgba(158, 34, 195, 1) 97%
-  );
-  position: relative;
-  z-index: -1;
   top: -70px;
+  .goBack {
+    margin: 20px 70px;
+    background-color: transparent;
+    padding: 9px 14px;
+    cursor: pointer;
+    border: 1px solid #8d96ba;
+    color: #8d96ba;
+    border-radius: 4px;
+    transition: all .5s;
+    &:hover{
+      border: 1px solid rgb(255, 0, 234);
+      color: rgb(255, 0, 234);
+      background-color: transparent;
+    }
+    &:active {
+      background-color:  rgb(76, 0, 255);
+      color: #fff;
+      border: none;
+      transform: scale(1.05);
+    }
+  }
   .container {
     .detail {
       font-family: "Mulish", sans-serif;
       color: #fff;
-      padding: 180px 15px;
+      padding: 120px 15px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -20,11 +33,20 @@
       .info {
         width: 50%;
         font-size: 30px;
+        .coursesName {
+          color: transparent;
+          background-clip: text;
+          background-image: linear-gradient(
+            to right,
+            rgb(76, 0, 255),
+            rgb(255, 0, 234)
+          );
+        }
         .desc {
           margin: 15px 0;
           font-size: 18px;
           line-height: 25px;
-          color: #b4bee4;
+          color: #8d96ba;
         }
       }
     }
