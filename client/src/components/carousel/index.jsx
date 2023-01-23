@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import { Autoplay, Navigation } from "swiper";
 import { Link } from "react-router-dom";
 
-const Carousel = () => {
+const Carousel = ({basket, setBasket, count, setCount}) => {
   const [courses, setCourses] = useState();
 
   useEffect(() => {
@@ -18,6 +18,25 @@ const Carousel = () => {
       .get(`http://localhost:8080/courses`)
       .then((data) => setCourses(data.data));
   }, []);
+
+  // const handleAddToBasket = (obj) => {
+  //   if (!basket.find((e) => e.id === obj.id)) {
+  //     setBasket([...basket, obj]);
+  //     setCount(count + 1);
+  //   }else {
+  //     alert('already added')
+  //   }
+  // };
+
+  // const handleAddToCard = (obj) => {
+  //   if (!basket.find((el) => el.id === obj.id)) {
+  //     setBasket([...basket, obj]);
+  //     setCount(count + 1);
+  //   } else {
+  //     alert("Already added");
+  //   }
+  // };
+
 
   return (
     <div id="carousel">
@@ -61,6 +80,7 @@ const Carousel = () => {
                     <button className="carouselBtn">Find Out More</button>
                   </div>
                 </Link>
+                    {/* <button className="carouselBtn" onClick={() => handleAddToCard(course)}>Add</button> */}
               </SwiperSlide>
             );
           })}

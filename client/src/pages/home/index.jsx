@@ -5,7 +5,8 @@ import CarouselExperts from "../../components/carouselExperts";
 import SubCards from "../../components/sub-cards";
 import BgImg from "../../img/h1_hero.png";
 import "./index.scss";
-const Home = () => {
+const Home = ({ basket, setBasket, count, setCount }) => {
+
   return (
     <div id="Home">
       <img src={BgImg} alt="" className="bgimg" />
@@ -25,7 +26,7 @@ const Home = () => {
         {/* Carousel with our courses */}
         <div className="ourCourses">
           <h2>Our featured courses</h2>
-          <Carousel />
+          <Carousel basket={basket} setBasket={setBasket} />
         </div>
 
         {/*Explore our top subjects */}

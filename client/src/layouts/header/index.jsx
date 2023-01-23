@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import Logo from "../../img/logo.png.webp";
 import { Dropdown, Space } from "antd";
 import "./index.scss";
-const Header = () => {
+const Header = ({count}) => {
   const items = [
     {
       key: "1",
@@ -68,7 +68,13 @@ const Header = () => {
                 {" "}
                 <NavLink to={"/pages/add-course"}> Add Course </NavLink>
               </li>
-              <li><i className="fa-solid fa-bag-shopping bag"></i></li>
+              <li>
+                {" "}
+                <NavLink to={"/layouts/header"}>
+                  <i className="fa-solid fa-bag-shopping bag"></i>
+                  <sub>{count}</sub>
+                </NavLink>
+              </li>
             </ul>
             <div className="headerBtn">
               <button className="btn-join">Join</button>
